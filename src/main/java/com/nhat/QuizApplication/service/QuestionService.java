@@ -1,8 +1,8 @@
 package com.nhat.QuizApplication.service;
 
 
+import com.nhat.QuizApplication.dao.QuestionDao;
 import com.nhat.QuizApplication.model.Question;
-import com.nhat.QuizApplication.repo.QuestionRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +12,9 @@ import java.util.List;
 public class QuestionService {
 
     @Autowired
-    private QuestionRepo questionRepo;
+    private QuestionDao questionDao;
 
     public List<Question> getAllQuestions() {
-        return questionRepo.findAll();
+        return questionDao.findAll();
     }
 }
