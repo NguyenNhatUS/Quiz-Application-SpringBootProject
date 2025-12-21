@@ -206,7 +206,7 @@ For POST requests:
 
 ✉️ Email: nldnhat182006@gmail.com  
 
-🔗 LinkedIn: https://www.linkedin.com/in/nhat-nguyen-628926367/
+🔗 LinkedIn: https://www.linkedin.com/in/nhat-nguyen-spring/
 
 🏫 University: University of Science (VNU-HCMUS) 
 
