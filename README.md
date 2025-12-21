@@ -1,15 +1,12 @@
-🎯 Quiz Application – Backend API
-📌 Overview
+🎯 **Quiz Application – Backend API**
+
+📌 **Overview**
 
 This repository contains the backend implementation of a Quiz Application, built using Spring Boot.
+
 The system manages question banks, quiz creation, user attempts, and scoring logic via RESTful APIs.
 
-👨‍🎓 Author: Nguyen Le Duc Nhat
-🏫 University: University of Science (VNU-HCMUS)
-🎓 Major: Information Technology
-📚 Year: Second-year student
-
-🚀 Features
+🚀 **Features**
 
 ✅ RESTful API using Spring Boot
 
@@ -25,87 +22,92 @@ The system manages question banks, quiz creation, user attempts, and scoring log
 
 ✅ SQL logging enabled for debugging
 
-🛠️ Tech Stack
+🛠️ **Tech Stack**
 
-Java 17+
+    Java 17+
+    
+    Spring Boot
+    
+    Spring Data JPA
+    
+    Hibernate
+    
+    MySQL
+    
+    Maven
 
-Spring Boot
+⚙️ **Prerequisites**
 
-Spring Data JPA
+    Make sure you have installed:
+    
+    Java Development Kit (JDK 17+)
+    
+    Maven
+    
+    MySQL Server
+    
+    IDE: IntelliJ IDEA / Eclipse / VS Code
 
-Hibernate
+🧩 **Setup & Installation**
 
-MySQL
-
-Maven
-
-⚙️ Prerequisites
-
-Make sure you have installed:
-
-Java Development Kit (JDK 17+)
-
-Maven
-
-MySQL Server
-
-IDE: IntelliJ IDEA / Eclipse / VS Code
-
-🧩 Setup & Installation
-
-1️⃣ Clone the Repository
+1️⃣ **Clone the Repository**
 
     git clone https://github.com/your-username/your-repo-name.git
 
     cd your-repo-name
 
-2️⃣ Database Configuration
+2️⃣ **Database Configuration**
 
 Navigate to:
 
-src/main/resources/
+    src/main/resources/
 
 
-Copy application.properties.example
+Copy **application.properties.example**
 
-Create a new file named application.properties
+Create a new file named **application.properties**
 
-Update it with your local MySQL credentials:
+Update it with your local **MySQL** credentials:
 
-# MySQL Configuration
+# **MySQL Configuration**
     spring.datasource.url=jdbc:mysql://localhost:3306/your_database
     spring.datasource.username=your_username
     spring.datasource.password=your_password
 
-# JPA & Hibernate
+# **JPA & Hibernate**
     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
     spring.jpa.hibernate.ddl-auto=update
     spring.jpa.show-sql=true
     spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 
 3️⃣ Run the Application
-Using Maven:
-mvn spring-boot:run
+
+Using **Maven**:
+
+    mvn spring-boot:run
 
 Or run directly from IDE:
 
-Open QuizApplication.java
+Open 
+**QuizApplication.java**
 
-Click Run
+**Click Run**
 
 📍 Server will start at:
 
 http://localhost:8080
 
-📖 API Usage Guide
+📖 **API Usage Guide**
 
 The application provides two main modules:
 
 Question Management
 
-Quiz Logic
+Quiz Management
 
-🧠 Question APIs (/question)
+**Quiz Logic**
+
+🧠 **Question APIs (/question)**
 
 Method	Endpoint	Description
 
@@ -135,7 +137,7 @@ Example Request
         "category": "Geography"
     }
 
-🧪 Quiz APIs (/quiz)
+🧪 **Quiz APIs (/quiz)**
 
 Method	Endpoint	Description
 
@@ -151,22 +153,22 @@ Submit answers & get score
 
     /quiz/submit/{id}	
 
-📝 Quiz Flow Example
+📝 **Quiz Flow Example**
 
-1️⃣ Create Quiz
+1️⃣ **Create Quiz**
 
 POST 
 
     /quiz/create?category=Java&numQ=5&title=JavaBasics
 
-2️⃣ Get Quiz Questions
+2️⃣ **Get Quiz Questions**
 
     /quiz/get/{id} // /quiz/get/1
 
 
 ➡ Returns QuestionWrapper (no correct answers exposed)
 
-3️⃣ Submit Quiz Answers
+3️⃣ **Submit Quiz Answers**
 
     [
     {
@@ -180,12 +182,11 @@ POST
     ]
 
 
-✅ Response:
-4
+✅ **Response:4**
 
 (Your total score)
 
-🧪 Testing with Postman
+🧪 **Testing with Postman**
 
 Open Postman
 
@@ -201,8 +202,13 @@ For POST requests:
 
 🤝 Contact
 
-📧 Author: Nguyen Le Duc Nhat - 24CTT3
+👨📧 Author: **Nguyen Le Duc Nhat** (24CTT3)
 
-🏫 University: University of Science (VNU-HCMUS)
+✉️ Email: nldnhat182006@gmail.com  
+
+🔗 LinkedIn: https://www.linkedin.com/in/nhat-nguyen-628926367/
+
+🏫 University: University of Science (VNU-HCMUS) 
 
 💻 Major: Information Technology
+
