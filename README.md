@@ -52,9 +52,12 @@ MySQL Server
 IDE: IntelliJ IDEA / Eclipse / VS Code
 
 🧩 Setup & Installation
+
 1️⃣ Clone the Repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+
+    git clone https://github.com/your-username/your-repo-name.git
+
+    cd your-repo-name
 
 2️⃣ Database Configuration
 
@@ -70,15 +73,15 @@ Create a new file named application.properties
 Update it with your local MySQL credentials:
 
 # MySQL Configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/your_database
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+    spring.datasource.url=jdbc:mysql://localhost:3306/your_database
+    spring.datasource.username=your_username
+    spring.datasource.password=your_password
 
 # JPA & Hibernate
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+    spring.jpa.hibernate.ddl-auto=update
+    spring.jpa.show-sql=true
+    spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
 
 3️⃣ Run the Application
 Using Maven:
@@ -103,54 +106,82 @@ Question Management
 Quiz Logic
 
 🧠 Question APIs (/question)
+
 Method	Endpoint	Description
-GET	/question/allQuestions	Get all questions
-GET	/question/category/{category}	Get questions by category
-POST	/question/add	Add a new question
-➕ Add Question – Example Request
-{
-"questionTitle": "What is the capital of France?",
-"option1": "Berlin",
-"option2": "Madrid",
-"option3": "Paris",
-"option4": "Rome",
-"rightAnswer": "Paris",
-"difficultylevel": "Easy",
-"category": "Geography"
-}
+
+Get all questions
+
+    /question/allQuestions	
+
+Get questions by category
+
+    /question/category/{category}	
+
+Add a new question
+
+    /question/add
+
+Add Question
+Example Request
+
+    {
+        "questionTitle": "What is the capital of France?",
+        "option1": "Berlin",
+        "option2": "Madrid",
+        "option3": "Paris",
+        "option4": "Rome",
+        "rightAnswer": "Paris",
+        "difficultylevel": "Easy",
+        "category": "Geography"
+    }
 
 🧪 Quiz APIs (/quiz)
+
 Method	Endpoint	Description
-POST	/quiz/create	Create quiz (category, numQ, title)
-GET	/quiz/get/{id}	Get quiz questions (without answers)
-POST	/quiz/submit/{id}	Submit answers & get score
+
+Create quiz (category, numQ, title)
+
+    /quiz/create
+
+Get quiz questions (without answers)'
+
+    /quiz/get/{id}	
+
+Submit answers & get score	
+
+    /quiz/submit/{id}	
+
 📝 Quiz Flow Example
+
 1️⃣ Create Quiz
-POST /quiz/create?category=Java&numQ=5&title=JavaBasics
+
+POST 
+
+    /quiz/create?category=Java&numQ=5&title=JavaBasics
 
 2️⃣ Get Quiz Questions
-GET /quiz/get/1
+
+    /quiz/get/{id} // /quiz/get/1
 
 
 ➡ Returns QuestionWrapper (no correct answers exposed)
 
 3️⃣ Submit Quiz Answers
-[
-{
-"id": 1,
-"response": "Paris"
-},
-{
-"id": 2,
-"response": "Spring Boot"
-}
-]
+
+    [
+    {
+    "id": 1,
+    "response": "Paris"
+    },
+    {
+    "id": 2,
+    "response": "Spring Boot"
+    }
+    ]
 
 
 ✅ Response:
-
 4
-
 
 (Your total score)
 
@@ -158,18 +189,20 @@ GET /quiz/get/1
 
 Open Postman
 
-Ensure backend is running at http://localhost:8080
-
-Create requests according to endpoints
+    Ensure backend is running at http://localhost:8080
+    
+    Create requests according to endpoints
 
 For POST requests:
 
-Body → raw
-
-Format → JSON
+    Body → raw
+    
+    Format → JSON
 
 🤝 Contact
 
-📧 Author: Nguyen Le Duc Nhat
+📧 Author: Nguyen Le Duc Nhat - 24CTT3
+
 🏫 University: University of Science (VNU-HCMUS)
+
 💻 Major: Information Technology
