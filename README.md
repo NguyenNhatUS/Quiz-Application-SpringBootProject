@@ -1,76 +1,175 @@
-Quiz Application (Backend API)
-Hi there! I am Nguyen Le Duc Nhat, a second-year IT student at the University of Science (VNU-HCMUS).
-This repository contains the backend implementation of a Quiz Application, designed to handle quiz management, user attempts, and scoring logic.
+🎯 Quiz Application – Backend API
+📌 Overview
+
+This repository contains the backend implementation of a Quiz Application, built using Spring Boot.
+The system manages question banks, quiz creation, user attempts, and scoring logic via RESTful APIs.
+
+👨‍🎓 Author: Nguyen Le Duc Nhat
+🏫 University: University of Science (VNU-HCMUS)
+🎓 Major: Information Technology
+📚 Year: Second-year student
 
 🚀 Features
-RESTful API Design: Built with Spring Boot for scalability and ease of integration.
 
-Database Management: Integrated with MySQL using Spring Data JPA.
+✅ RESTful API using Spring Boot
 
-ORM: Leverages Hibernate for efficient data mapping and schema updates.
+✅ Quiz management (create quizzes from question bank)
 
-Logging: SQL query logging enabled for easier debugging and development.
+✅ Question bank with category & difficulty
 
-🛠️ Prerequisites
-Before running this project, ensure you have the following installed:
+✅ Automatic scoring logic
 
-Java Development Kit (JDK): Version 17 or higher.
+✅ MySQL integration with Spring Data JPA
 
-Maven: For dependency management.
+✅ Hibernate ORM for entity mapping
 
-MySQL Server: Ensure the service is running on your machine.
+✅ SQL logging enabled for debugging
 
-An IDE: IntelliJ IDEA, Eclipse, or VS Code.
+🛠️ Tech Stack
 
-⚙️ Setup and Installation
-Follow these steps to get the project running locally:
+Java 17+
 
-1. Clone the Repository
-Bash
+Spring Boot
 
+Spring Data JPA
+
+Hibernate
+
+MySQL
+
+Maven
+
+⚙️ Prerequisites
+
+Make sure you have installed:
+
+Java Development Kit (JDK 17+)
+
+Maven
+
+MySQL Server
+
+IDE: IntelliJ IDEA / Eclipse / VS Code
+
+🧩 Setup & Installation
+1️⃣ Clone the Repository
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
-2. Database Configuration
-To connect the application to your local MySQL instance, you need to create an application.properties file:
 
-Locate the file named src/main/resources/application.properties.example.
+2️⃣ Database Configuration
 
-Copy its content and create a new file named application.properties in the same directory.
+Navigate to:
 
-Replace the placeholder values with your local database credentials:
+src/main/resources/
 
-Properties
 
-# MySQL Connection URL (Change 'your_database' to your local schema name)
+Copy application.properties.example
+
+Create a new file named application.properties
+
+Update it with your local MySQL credentials:
+
+# MySQL Configuration
 spring.datasource.url=jdbc:mysql://localhost:3306/your_database
-
-# Your MySQL Username (usually 'root')
 spring.datasource.username=your_username
-
-# Your MySQL Password
 spring.datasource.password=your_password
 
-# Hibernate Configuration
+# JPA & Hibernate
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
-3. Run the Application
-You can start the application using Maven in your terminal:
 
-Bash
-
+3️⃣ Run the Application
+Using Maven:
 mvn spring-boot:run
-Alternatively, run the QuizApplication.java file directly from your IDE.
 
-📖 API Documentation
-The API will be available at http://localhost:8080. (Note: If you have specific endpoints like /api/quizzes, you might want to list them here.)
+Or run directly from IDE:
+
+Open QuizApplication.java
+
+Click Run
+
+📍 Server will start at:
+
+http://localhost:8080
+
+📖 API Usage Guide
+
+The application provides two main modules:
+
+Question Management
+
+Quiz Logic
+
+🧠 Question APIs (/question)
+Method	Endpoint	Description
+GET	/question/allQuestions	Get all questions
+GET	/question/category/{category}	Get questions by category
+POST	/question/add	Add a new question
+➕ Add Question – Example Request
+{
+"questionTitle": "What is the capital of France?",
+"option1": "Berlin",
+"option2": "Madrid",
+"option3": "Paris",
+"option4": "Rome",
+"rightAnswer": "Paris",
+"difficultylevel": "Easy",
+"category": "Geography"
+}
+
+🧪 Quiz APIs (/quiz)
+Method	Endpoint	Description
+POST	/quiz/create	Create quiz (category, numQ, title)
+GET	/quiz/get/{id}	Get quiz questions (without answers)
+POST	/quiz/submit/{id}	Submit answers & get score
+📝 Quiz Flow Example
+1️⃣ Create Quiz
+POST /quiz/create?category=Java&numQ=5&title=JavaBasics
+
+2️⃣ Get Quiz Questions
+GET /quiz/get/1
+
+
+➡ Returns QuestionWrapper (no correct answers exposed)
+
+3️⃣ Submit Quiz Answers
+[
+{
+"id": 1,
+"response": "Paris"
+},
+{
+"id": 2,
+"response": "Spring Boot"
+}
+]
+
+
+✅ Response:
+
+4
+
+
+(Your total score)
+
+🧪 Testing with Postman
+
+Open Postman
+
+Ensure backend is running at http://localhost:8080
+
+Create requests according to endpoints
+
+For POST requests:
+
+Body → raw
+
+Format → JSON
 
 🤝 Contact
-Author: Nguyen Le Duc Nhat
 
-University: University of Science (VNU-HCMUS)
-
-Major: Information Technology
-
-Would you like me to add a specific section for API Endpoints (like GET, POST requests) or instructions on how to use Postman to test your quiz logic?
+📧 Author: Nguyen Le Duc Nhat
+🏫 University: University of Science (VNU-HCMUS)
+💻 Major: Information Technology
