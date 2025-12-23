@@ -38,7 +38,7 @@ The system manages question banks, quiz creation, user attempts, and scoring log
 
 ⚙️ **Prerequisites**
 
-    Make sure you have installed:
+Make sure you have installed:
     
     Java Development Kit (JDK 17+)
     
@@ -52,9 +52,8 @@ The system manages question banks, quiz creation, user attempts, and scoring log
 
 1️⃣ **Clone the Repository**
 
-    git clone https://github.com/your-username/your-repo-name.git
+    https://github.com/NguyenNhatUS/Quiz-Application-SpringBootProject.git
 
-    cd your-repo-name
 
 2️⃣ **Database Configuration**
 
