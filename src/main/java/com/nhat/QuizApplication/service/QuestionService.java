@@ -18,7 +18,6 @@ public class QuestionService {
     private QuestionDao questionDao;
 
     public ResponseEntity<List<Question>>  getAllQuestions() {
-
         try {
             return new ResponseEntity<>(questionDao.findAll(), HttpStatus.OK);
         }
@@ -37,7 +36,6 @@ public class QuestionService {
             e.printStackTrace();
         }
         return new ResponseEntity<>(new ArrayList<>(), HttpStatus.BAD_REQUEST);
-
     }
 
     public ResponseEntity<String> addQuestion(Question question) {

@@ -1,5 +1,6 @@
 package com.nhat.QuizApplication.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,6 +27,7 @@ public class Question {
     private String category;
 
     @ManyToMany(mappedBy = "questions")
+    @JsonIgnore
     private List<Quiz> quizzes = new ArrayList<>();
 
 }

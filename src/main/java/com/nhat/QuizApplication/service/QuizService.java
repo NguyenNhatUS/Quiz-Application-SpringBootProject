@@ -53,7 +53,7 @@ public class QuizService {
         return new ResponseEntity<>(questionForUser, HttpStatus.OK);
     }
 
-    public ResponseEntity<Integer> calculateResult(Integer id, List<Response> responses) {
+    public ResponseEntity<String> calculateResult(Integer id, List<Response> responses) {
         Quiz quiz = quizDao.findById(id).get();
         List<Question> questions = quiz.getQuestions();
 
@@ -64,6 +64,6 @@ public class QuizService {
                 right++;
             }
         }
-        return new ResponseEntity<>(right, HttpStatus.OK);
+        return new ResponseEntity<>("Mark: " + right / i * 100 + "/" + "100", HttpStatus.OK);
     }
 }
