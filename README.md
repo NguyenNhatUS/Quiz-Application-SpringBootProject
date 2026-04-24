@@ -1,28 +1,28 @@
-🎯 **Quiz Application – Backend API**
+ **Quiz Application – Backend API**
 
-📌 **Overview**
+ **Overview**
 
 This repository contains the backend implementation of a Quiz Application, built using Spring Boot.
 
 The system manages question banks, quiz creation, user attempts, and scoring logic via RESTful APIs.
 
-🚀 **Features**
+ **Features**
 
-✅ RESTful API using Spring Boot
+ RESTful API using Spring Boot
 
-✅ Quiz management (create quizzes from question bank)
+ Quiz management (create quizzes from question bank)
 
-✅ Question bank with category & difficulty
+ Question bank with category & difficulty
 
-✅ Automatic scoring logic
+ Automatic scoring logic
 
-✅ MySQL integration with Spring Data JPA
+ MySQL integration with Spring Data JPA
 
-✅ Hibernate ORM for entity mapping
+ Hibernate ORM for entity mapping
 
-✅ SQL logging enabled for debugging
+ SQL logging enabled for debugging
 
-🛠️ **Tech Stack**
+ **Tech Stack**
 
     Java 17+
     
@@ -36,7 +36,7 @@ The system manages question banks, quiz creation, user attempts, and scoring log
     
     Maven
 
-⚙️ **Prerequisites**
+ **Prerequisites**
 
 Make sure you have installed:
     
@@ -48,14 +48,14 @@ Make sure you have installed:
     
     IDE: IntelliJ IDEA / Eclipse / VS Code
 
-🧩 **Setup & Installation**
+ **Setup & Installation**
 
-1️⃣ **Clone the Repository**
+1 **Clone the Repository**
 
     https://github.com/NguyenNhatUS/Quiz-Application-SpringBootProject.git
 
 
-2️⃣ **Database Configuration**
+2️ **Database Configuration**
 
 Navigate to:
 
@@ -92,11 +92,11 @@ Open
 
 **Click Run**
 
-📍 Server will start at:
+ Server will start at:
 
 http://localhost:8080
 
-📖 **API Usage Guide**
+ **API Usage Guide**
 
 The application provides two main modules:
 
@@ -106,7 +106,7 @@ Quiz Management
 
 **Quiz Logic**
 
-🧠 **Question APIs (/question)**
+ **Question APIs (/question)**
 
 Method	Endpoint	Description
 
@@ -170,18 +170,18 @@ POST
 3️⃣ **Submit Quiz Answers**
 
     [
-    {
-    "id": 1,
-    "response": "Paris"
-    },
-    {
-    "id": 2,
-    "response": "Spring Boot"
-    }
+        {
+            "id": 1,
+            "response": "Paris"
+        },
+        {
+            "id": 2,
+            "response": "Spring Boot"
+        }
     ]
 
 
-✅ **Response:4**
+ **Response:4**
 
 (Your total score)
 
@@ -199,15 +199,15 @@ For POST requests:
     
     Format → JSON
 
-🤝 Contact
+ Contact
 
-👨📧 Author: **Nguyen Le Duc Nhat** (24CTT3)
+ Author: **Nguyen Le Duc Nhat** (24CTT3)
 
-✉️ Email: nldnhat182006@gmail.com  
+ Email: nldnhat182006@gmail.com  
 
-🔗 LinkedIn: https://www.linkedin.com/in/nhat-nguyen-spring/
+ LinkedIn: https://www.linkedin.com/in/nhat-nguyen-spring/
 
-🏫 University: University of Science (VNU-HCMUS) 
+ University: University of Science (VNU-HCMUS) 
 
-💻 Major: Information Technology
+ Major: Information Technology
 
